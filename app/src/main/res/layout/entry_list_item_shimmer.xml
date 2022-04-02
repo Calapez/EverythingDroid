@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:cardCornerRadius="4dp"
+    android:elevation="8dp"
+    android:paddingVertical="6dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/missionImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Mission Image Loading"
+            android:scaleType="centerCrop"
+            android:background="@color/shimmerColor"/>
+
+        <ImageView
+            android:id="@+id/successfulImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Successful Image Loading"
+            android:scaleType="centerCrop"
+            android:background="@color/shimmerColor"/>
+
+        <TextView
+            android:id="@+id/textMission"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            app:layout_constraintTop_toTopOf="@id/missionImage"
+            app:layout_constraintStart_toEndOf="@id/missionImage"
+            app:layout_constraintEnd_toStartOf="@id/successfulImage"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="4dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+            android:textSize="20sp"
+            android:background="@color/shimmerColor"/>
+
+        <TextView
+            android:id="@+id/textDateTime"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            app:layout_constraintTop_toBottomOf="@id/textMission"
+            app:layout_constraintStart_toEndOf="@id/missionImage"
+            app:layout_constraintEnd_toStartOf="@id/successfulImage"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginTop="5dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+            android:textSize="20sp"
+            android:background="@color/shimmerColor"/>
+
+        <TextView
+            android:id="@+id/textRocket"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            app:layout_constraintTop_toBottomOf="@id/textDateTime"
+            app:layout_constraintStart_toEndOf="@id/missionImage"
+            app:layout_constraintEnd_toStartOf="@id/successfulImage"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginTop="5dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+            android:textSize="20sp"
+            android:background="@color/shimmerColor"/>
+
+        <TextView
+            android:id="@+id/textDays"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            app:layout_constraintTop_toBottomOf="@id/textRocket"
+            app:layout_constraintStart_toEndOf="@id/missionImage"
+            app:layout_constraintEnd_toStartOf="@id/successfulImage"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginTop="5dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+            android:textSize="20sp"
+            android:background="@color/shimmerColor"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

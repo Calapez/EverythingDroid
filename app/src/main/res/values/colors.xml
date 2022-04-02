@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="main">#fcad03</color>
+    <color name="main_variant">#feb60f</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="shimmerColor">#C2C2C2</color>
+    <color name="cardBackground">#E8E6E6</color>
+
+</resources>

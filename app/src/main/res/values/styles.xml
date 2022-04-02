@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ToolbarTheme" parent="ThemeOverlay.MaterialComponents.ActionBar">
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">#EEEEEE</item>
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+        <item name="background">?colorPrimary</item>
+    </style>
+
+    <style name="SpaceXSwitch" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">@color/main</item>
+
+        <item name="colorSwitchThumbNormal">#f1f1f1</item>
+
+        <item name="android:colorForeground">#42221f1f
+        </item>
+    </style>
+</resources>
