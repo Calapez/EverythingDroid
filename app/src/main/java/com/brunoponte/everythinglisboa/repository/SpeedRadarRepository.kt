@@ -1,19 +1,28 @@
 package com.brunoponte.everythinglisboa.repository
 
-import com.brunoponte.everythinglisboa.domain.model.Launch
-import com.brunoponte.everythinglisboa.network.IRequestService
+import com.brunoponte.everythinglisboa.domain.speedRadar.model.SpeedRadar
+import com.brunoponte.everythinglisboa.network.speedRadar.ISpeedRadarRequestService
 
-class LisbonRepository(
-    private val requestService: IRequestService,
+class SpeedRadarRepository(
+    private val speedRadarRequestService: ISpeedRadarRequestService,
     //private val lisbonEntryDao: LisbonEntryDao,
 ) {
 
-    suspend fun getLaunches(): List<Launch> {
+    suspend fun getSpeedRadars(): List<SpeedRadar> {
         try {
-            val launches = requestService.getLaunches()
-            return launches.map {
-                Launch(it.flightNumber, it.missionName, it.launchDateUnix, it.launchSuccess)
-            }
+            val speedRadars = speedRadarRequestService.getSpeedRadar(
+                "1=1",
+                "*",
+                "pgeojson"
+            ).speedRadars
+
+            return speedRadars?.map {
+                SpeedRadar(
+                    it.id,
+                    it.geometry?.coordinates?.get(1),
+                    it.geometry?.coordinates?.get(0),
+                    it.properties?.angle)
+            } ?: listOf()
         } catch (e: Exception) {
             // There was a network issue
             e.printStackTrace()

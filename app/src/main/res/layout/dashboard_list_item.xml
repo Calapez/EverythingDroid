@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    app:cardCornerRadius="7dp"
+    android:elevation="20dp"
+    android:layout_marginBottom="20dp"
+    android:padding="5dp"
+    app:cardBackgroundColor="@color/cardBackground">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        tools:text="Teste 123" />
+
+</androidx.cardview.widget.CardView>

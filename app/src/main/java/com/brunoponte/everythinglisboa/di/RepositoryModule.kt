@@ -1,7 +1,7 @@
 package com.brunoponte.everythinglisboa.di
 
-import com.brunoponte.everythinglisboa.network.IRequestService
-import com.brunoponte.everythinglisboa.repository.LisbonRepository
+import com.brunoponte.everythinglisboa.network.speedRadar.ISpeedRadarRequestService
+import com.brunoponte.everythinglisboa.repository.SpeedRadarRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -14,9 +14,9 @@ object RepositoryModule {
 
     @Singleton
     @Provides
-    fun provideLaunchRepository(
-        requestService: IRequestService
-    ) : LisbonRepository {
-        return LisbonRepository(requestService)
+    fun provideSpeedRadarRepository(
+        speedRadarRequestService: ISpeedRadarRequestService
+    ) : SpeedRadarRepository {
+        return SpeedRadarRepository(speedRadarRequestService)
     }
 }

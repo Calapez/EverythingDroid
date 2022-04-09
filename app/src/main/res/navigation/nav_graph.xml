@@ -3,12 +3,31 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/launchesFragment">
+    app:startDestination="@id/dashboardFragment">
 
     <fragment
-        android:id="@+id/launchesFragment"
+        android:id="@+id/dashboardFragment"
         android:name="com.brunoponte.everythinglisboa.ui.dashboard.DashboardFragment"
-        android:label="WelcomeInfoFragment"
-        tools:layout="@layout/fragment_dashboard" />
+        android:label="DashboardFragment"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboardFragment_to_speedRadarFragment"
+            app:destination="@id/speedRadarFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_cameraFragment"
+            app:destination="@id/cameraFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/speedRadarFragment"
+        android:name="com.brunoponte.everythinglisboa.ui.speedRadar.SpeedRadarFragment"
+        android:label="SpeedRadarFragment"
+        tools:layout="@layout/fragment_speed_radar" />
+
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="com.brunoponte.everythinglisboa.ui.camera.CameraFragment"
+        android:label="CameraFragment"
+        tools:layout="@layout/fragment_camera" />
 
 </navigation>
