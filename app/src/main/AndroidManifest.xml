@@ -20,7 +20,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
 
-        <service android:name=".ui.counterService.CounterService" />
+        <service android:name=".ui.musicPlayer.CounterService" />
 
         <activity
             android:name=".ui.MainActivity"

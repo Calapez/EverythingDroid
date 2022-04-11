@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_dashboardFragment_to_cameraFragment"
             app:destination="@id/cameraFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_musicPlayerFragment"
+            app:destination="@id/musicPlayerFragment" />
     </fragment>
 
     <fragment
@@ -29,5 +32,10 @@
         android:name="com.brunoponte.everythinglisboa.ui.camera.CameraFragment"
         android:label="CameraFragment"
         tools:layout="@layout/fragment_camera" />
+    <fragment
+        android:id="@+id/musicPlayerFragment"
+        android:name="com.brunoponte.everythinglisboa.ui.musicPlayer.MusicPlayerFragment"
+        android:label="MusicPlayerFragment"
+        tools:layout="@layout/fragment_music_player" />
 
 </navigation>

@@ -1,4 +1,4 @@
-package com.brunoponte.everythinglisboa.ui.counterService
+package com.brunoponte.everythinglisboa.services
 
 import android.app.*
 import android.content.Intent
@@ -18,7 +18,7 @@ import com.brunoponte.everythinglisboa.ui.MainActivity
 
 private const val NOTIFICATION_ID = 100
 
-class CounterService : Service() {
+class MusicPlayerService : Service() {
 
     private var _notificationBuilder: Notification.Builder? = null
     private var _notificationBuilderCompat: NotificationCompat.Builder? = null
@@ -92,8 +92,8 @@ class CounterService : Service() {
             _notificationBuilder = Notification.Builder(this, CHANNEL_ID)
                 .setContentIntent(pendingIntent)
                 .setTicker("Everything Android. Service is running.") // Accessibility
-                .setContentTitle("Simple Foreground Service")
-                .setContentText("Explain about the service")
+                .setContentTitle("Song Name")
+                .setContentText("Artist Name")
                 .setVisibility(Notification.VISIBILITY_PUBLIC)
                 .setSmallIcon(R.drawable.ic_launcher_foreground)
                 // Apply the media style template
@@ -137,20 +137,20 @@ class CounterService : Service() {
     }
 
     private fun playPause() {
-        Log.d(CounterService::class.java.simpleName, "Play")
+        Log.d(MusicPlayerService::class.java.simpleName, "Play")
         // Do logic to play/pause the music
         _isPlaying = !_isPlaying
         updateActions()
     }
 
     private fun back() {
-        Log.d(CounterService::class.java.simpleName, "Back")
+        Log.d(MusicPlayerService::class.java.simpleName, "Back")
         // Do logic to move music back
 
     }
 
     private fun forward() {
-        Log.d(CounterService::class.java.simpleName, "Forward")
+        Log.d(MusicPlayerService::class.java.simpleName, "Forward")
         // Do logic to move music forward
 
     }
@@ -189,7 +189,7 @@ class CounterService : Service() {
 
     private val actionIntents: List<PendingIntent>
     get() {
-        val backActionIntent = Intent(this, CounterService::class.java).apply {
+        val backActionIntent = Intent(this, MusicPlayerService::class.java).apply {
             action = BACK_ACTION_CODE
         }
 
@@ -199,7 +199,7 @@ class CounterService : Service() {
             backActionIntent,
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) PendingIntent.FLAG_MUTABLE else 0)
 
-        val playActionIntent = Intent(this, CounterService::class.java).apply {
+        val playActionIntent = Intent(this, MusicPlayerService::class.java).apply {
             action = PLAY_ACTION_CODE
         }
 
@@ -209,7 +209,7 @@ class CounterService : Service() {
             playActionIntent,
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) PendingIntent.FLAG_MUTABLE else 0)
 
-        val forwardActionIntent = Intent(this, CounterService::class.java).apply {
+        val forwardActionIntent = Intent(this, MusicPlayerService::class.java).apply {
             action = FORWARD_ACTION_CODE
         }
 

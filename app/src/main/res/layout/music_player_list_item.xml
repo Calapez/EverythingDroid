@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    app:cardCornerRadius="3dp"
+    android:elevation="20dp"
+    android:layout_marginBottom="20dp"
+    android:padding="5dp"
+    app:cardBackgroundColor="@color/cardBackground">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/imageSong"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="15dp"
+            tools:src="@color/main_variant"/>
+
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/imageSong"
+            app:layout_constraintStart_toEndOf="@id/imageSong"
+            app:layout_constraintEnd_toStartOf="@id/imagePlayPause"
+            android:layout_marginHorizontal="15dp"
+            tools:text="Nome da Musica" />
+
+        <TextView
+            android:id="@+id/textArtist"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/textTitle"
+            app:layout_constraintStart_toEndOf="@id/imageSong"
+            app:layout_constraintEnd_toStartOf="@id/imagePlayPause"
+            android:layout_marginVertical="5dp"
+            android:layout_marginHorizontal="15dp"
+            tools:text="Artista" />
+
+        <ImageButton
+            android:id="@+id/imagePlayPause"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintEnd_toStartOf="@id/imageDownload"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="15dp"
+            android:background="?android:attr/selectableItemBackground"
+            tools:src="@android:drawable/ic_media_play" />
+
+        <ImageButton
+            android:id="@+id/imageDownload"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="15dp"
+            android:background="?android:attr/selectableItemBackground"
+            tools:src="@drawable/ic_download" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

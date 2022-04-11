@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.brunoponte.everythinglisboa.R
 import com.brunoponte.everythinglisboa.databinding.FragmentDashboardBinding
 import com.brunoponte.everythinglisboa.enums.DashboardOption
-import com.brunoponte.everythinglisboa.ui.counterService.CounterService
+import com.brunoponte.everythinglisboa.services.MusicPlayerService
 import com.brunoponte.everythinglisboa.ui.dashboard.list_adapter.DashboardListAdapter
 import com.brunoponte.everythinglisboa.ui.dashboard.list_adapter.DashboardListInteraction
 import dagger.hilt.android.AndroidEntryPoint
@@ -64,7 +64,7 @@ class DashboardFragment : Fragment(), DashboardListInteraction {
         when (dashboardOption) {
             DashboardOption.CAMERA -> findNavController().navigate(R.id.action_dashboardFragment_to_cameraFragment)
             DashboardOption.RADARS -> findNavController().navigate(R.id.action_dashboardFragment_to_speedRadarFragment)
-            DashboardOption.START_FOREGROUND_SERVICE -> startForegroundService()
+            DashboardOption.START_FOREGROUND_SERVICE -> findNavController().navigate(R.id.action_dashboardFragment_to_musicPlayerFragment) //startForegroundService()
             DashboardOption.STOP_FOREGROUND_SERVICE -> stopForegroundService()
             else -> { }
         }
@@ -75,15 +75,15 @@ class DashboardFragment : Fragment(), DashboardListInteraction {
     }
 
     private fun startForegroundService() {
-        val serviceIntent = Intent(requireContext(), CounterService::class.java).apply {
-            action = CounterService.START_SERVICE_ACTION_CODE
+        val serviceIntent = Intent(requireContext(), MusicPlayerService::class.java).apply {
+            action = MusicPlayerService.START_SERVICE_ACTION_CODE
         }
         serviceIntent.putExtra("inputExtra", "A message toForeground Service")
         requireContext().startService(serviceIntent)
     }
 
     private fun stopForegroundService() {
-        val serviceIntent = Intent(requireContext(), CounterService::class.java)
+        val serviceIntent = Intent(requireContext(), MusicPlayerService::class.java)
         requireContext().stopService(serviceIntent)
     }
 }
