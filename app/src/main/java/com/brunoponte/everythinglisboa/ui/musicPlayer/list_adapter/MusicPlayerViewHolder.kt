@@ -21,8 +21,8 @@ class MusicPlayerViewHolder(
             }
 
             imagePlayPause.setImageResource(
-                if (song.isPlaying) android.R.drawable.ic_media_pause
-                else android.R.drawable.ic_media_play)
+                if (song.isPlaying) R.drawable.ic_pause
+                else R.drawable.ic_play)
 
             imageDownload.setImageResource(
                 if (song.isDownloading) R.drawable.ic_downloading

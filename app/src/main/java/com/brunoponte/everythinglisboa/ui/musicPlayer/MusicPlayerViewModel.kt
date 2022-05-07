@@ -34,11 +34,23 @@ constructor(
         }
     }
 
-    fun onPlayPause(song: Song) {
+    fun onPlay(song: Song) {
         val songList = mutableListOf<Song>()
         songs.value?.forEach {
             val songCopy = it.copy()
-            if (it == song) { songCopy.isPlaying = !songCopy.isPlaying }
+            if (it == song) { songCopy.isPlaying = true }
+
+            songList.add(songCopy)
+        }
+
+        songs.value = songList
+    }
+
+    fun onPause(song: Song) {
+        val songList = mutableListOf<Song>()
+        songs.value?.forEach {
+            val songCopy = it.copy()
+            if (it == song) { songCopy.isPlaying = false }
 
             songList.add(songCopy)
         }

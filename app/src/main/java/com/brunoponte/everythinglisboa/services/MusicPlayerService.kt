@@ -1,7 +1,10 @@
 package com.brunoponte.everythinglisboa.services
 
 import android.app.*
+import android.content.BroadcastReceiver
+import android.content.Context
 import android.content.Intent
+import android.content.IntentFilter
 import android.graphics.Bitmap
 import android.graphics.Color
 import android.graphics.drawable.Icon
@@ -12,14 +15,16 @@ import android.util.Log
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
+import androidx.lifecycle.MutableLiveData
 import com.brunoponte.everythinglisboa.R
+import com.brunoponte.everythinglisboa.domain.musicPlayer.model.Song
 import com.brunoponte.everythinglisboa.helpers.Util.Companion.getBitmapFromDrawable
 import com.brunoponte.everythinglisboa.ui.MainActivity
+import com.brunoponte.everythinglisboa.ui.musicPlayer.MusicPlayerFragment
 
 private const val NOTIFICATION_ID = 100
 
 class MusicPlayerService : Service() {
-
     private var _notificationBuilder: Notification.Builder? = null
     private var _notificationBuilderCompat: NotificationCompat.Builder? = null
 
@@ -28,8 +33,11 @@ class MusicPlayerService : Service() {
 
     private var _isPlaying = false
 
+    private var _song: Song? = null
+
     override fun onCreate() {
         super.onCreate()
+        registerReceiver(songReceiver, IntentFilter(BROADCAST_RECEIVER_ID))
     }
 
     // When startService() is called
@@ -40,12 +48,21 @@ class MusicPlayerService : Service() {
 
         initializeNotificationManagers()
 
+        isRunning = true
+
+        // Called when notification controls are clicked
         when (intent?.action) {
             PLAY_ACTION_CODE -> playPause()
             BACK_ACTION_CODE -> back()
             FORWARD_ACTION_CODE -> forward()
             START_SERVICE_ACTION_CODE -> startForeground(NOTIFICATION_ID, createNotification())
             else -> stopSelf()
+        }
+
+        // Called when new song is selected
+        intent?.getParcelableExtra<Song?>(SONG_RECEIVER)?.let { song ->
+            _song = song
+            playPause()
         }
 
         return START_STICKY // tells the OS to recreate the service when it has enough memory
@@ -60,6 +77,7 @@ class MusicPlayerService : Service() {
     // When stopSelf() or stopService() is called
     override fun onDestroy() {
         super.onDestroy()
+        isRunning = false
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
@@ -141,6 +159,11 @@ class MusicPlayerService : Service() {
         // Do logic to play/pause the music
         _isPlaying = !_isPlaying
         updateActions()
+        Intent().also { intent ->
+            intent.action = MusicPlayerFragment.BROADCAST_RECEIVER_ID
+            intent.putExtra(if (_isPlaying) PLAY_ACTION_CODE else PAUSE_ACTION_CODE, _song)
+            sendBroadcast(intent)
+        }
     }
 
     private fun back() {
@@ -174,6 +197,14 @@ class MusicPlayerService : Service() {
             }
 
             _notificationManagerCompat!!.notify(NOTIFICATION_ID, _notificationBuilderCompat!!.build())
+        }
+    }
+
+    private val songReceiver: BroadcastReceiver = object : BroadcastReceiver() {
+        override fun onReceive(context: Context, intent: Intent) {
+            intent.getParcelableExtra<Song?>(SONG_RECEIVER)?.let { song ->
+                playPause()
+            }
         }
     }
 
@@ -259,7 +290,14 @@ class MusicPlayerService : Service() {
         const val FORWARDS_REQUEST_CODE = 1003
         const val START_SERVICE_ACTION_CODE = "START SERVICE"
         const val PLAY_ACTION_CODE = "PLAY"
+        const val PAUSE_ACTION_CODE = "PAUSE"
         const val BACK_ACTION_CODE = "BACK"
         const val FORWARD_ACTION_CODE = "FORWARD"
+
+        const val SONG_RECEIVER = "SongReceiver"
+        const val BROADCAST_RECEIVER_ID = "MusicPlayerServiceBroadcastReceiver"
+
+
+        var isRunning: Boolean = false
     }
 }

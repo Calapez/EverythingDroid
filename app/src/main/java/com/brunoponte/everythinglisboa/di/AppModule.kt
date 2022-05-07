@@ -2,6 +2,7 @@ package com.brunoponte.everythinglisboa.di
 
 import android.content.Context
 import com.brunoponte.everythinglisboa.ApplicationClass
+import com.brunoponte.everythinglisboa.domain.musicPlayer.model.Song
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

@@ -1,5 +1,9 @@
 package com.brunoponte.everythinglisboa.domain.musicPlayer.model
 
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
 data class Song (
     val id: Long,
     val artist: String,
@@ -9,4 +13,4 @@ data class Song (
     var savedPath: String? = null,
     var isPlaying: Boolean = false,
     var isDownloading: Boolean = false
-)
+) : Parcelable
