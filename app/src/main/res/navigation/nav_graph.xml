@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_dashboardFragment_to_airplaneModeFragment"
             app:destination="@id/airplaneModeFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_appChooserFragment"
+            app:destination="@id/appChooserFragment" />
     </fragment>
 
     <fragment
@@ -45,5 +48,10 @@
         android:name="com.brunoponte.everythinglisboa.ui.airplaneMode.AirplaneModeFragment"
         android:label="AirplaneModeFragment"
         tools:layout="@layout/fragment_airplane_mode" />
+    <fragment
+        android:id="@+id/appChooserFragment"
+        android:name="com.brunoponte.everythinglisboa.ui.appChooser.AppChooserFragment"
+        android:label="AppChooserFragment"
+        tools:layout="@layout/fragment_app_chooser" />
 
 </navigation>

@@ -11,6 +11,7 @@ enum class DashboardOption(val text: String) {
     ANIMATION("Animações"),
     COMPOSE("Compose"),
     DETECT_AIRPLANE_MODE("Detectar Modo Avião"),
+    APP_CHOOSER("Partilhar texto com outra app"),
 
 
 }

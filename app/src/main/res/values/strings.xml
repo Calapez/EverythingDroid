@@ -32,4 +32,6 @@
     <string name="title_detects_airplane_mode_change">This screen detects airplane mode changes.</string>
     <string name="airplane_mode_enabled">Airplane mode enabled!</string>
     <string name="airplane_mode_disabled">Airplane mode disabled!</string>
+    <string name="edit_text_hint">Insert your text here</string>
+    <string name="share">Share</string>
 </resources>

@@ -25,7 +25,6 @@ import com.brunoponte.everythinglisboa.ui.dashboard.list_adapter.DashboardListAd
 import com.brunoponte.everythinglisboa.ui.dashboard.list_adapter.DashboardListInteraction
 import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
 class CameraFragment : Fragment() {
 
     private lateinit var binding: FragmentCameraBinding
