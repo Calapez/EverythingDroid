@@ -64,6 +64,7 @@ class DashboardFragment : Fragment(), DashboardListInteraction {
             DashboardOption.CAMERA -> findNavController().navigate(R.id.action_dashboardFragment_to_cameraFragment)
             DashboardOption.RADARS -> findNavController().navigate(R.id.action_dashboardFragment_to_speedRadarFragment)
             DashboardOption.START_FOREGROUND_SERVICE -> findNavController().navigate(R.id.action_dashboardFragment_to_musicPlayerFragment)
+            DashboardOption.DETECT_AIRPLANE_MODE -> findNavController().navigate(R.id.action_dashboardFragment_to_airplaneModeFragment)
             else -> { }
         }
     }

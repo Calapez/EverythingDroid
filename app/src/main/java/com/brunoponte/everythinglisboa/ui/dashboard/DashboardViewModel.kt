@@ -14,7 +14,8 @@ class DashboardViewModel : ViewModel() {
             DashboardOption.RADARS,
             DashboardOption.START_FOREGROUND_SERVICE,
             DashboardOption.STOP_FOREGROUND_SERVICE,
-            DashboardOption.ANIMATION)
+            DashboardOption.ANIMATION,
+            DashboardOption.DETECT_AIRPLANE_MODE)
     }
 
     fun onChangeLaunchScrollPosition(index: Int) {

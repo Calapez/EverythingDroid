@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_dashboardFragment_to_musicPlayerFragment"
             app:destination="@id/musicPlayerFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_airplaneModeFragment"
+            app:destination="@id/airplaneModeFragment" />
     </fragment>
 
     <fragment
@@ -37,5 +40,10 @@
         android:name="com.brunoponte.everythinglisboa.ui.musicPlayer.MusicPlayerFragment"
         android:label="MusicPlayerFragment"
         tools:layout="@layout/fragment_music_player" />
+    <fragment
+        android:id="@+id/airplaneModeFragment"
+        android:name="com.brunoponte.everythinglisboa.ui.airplaneMode.AirplaneModeFragment"
+        android:label="AirplaneModeFragment"
+        tools:layout="@layout/fragment_airplane_mode" />
 
 </navigation>

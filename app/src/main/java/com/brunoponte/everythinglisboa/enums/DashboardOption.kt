@@ -10,6 +10,7 @@ enum class DashboardOption(val text: String) {
     STOP_BACKGROUND_SERVICE("Parar Serviço em Background"),
     ANIMATION("Animações"),
     COMPOSE("Compose"),
+    DETECT_AIRPLANE_MODE("Detectar Modo Avião"),
 
 
 }

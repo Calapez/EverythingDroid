@@ -29,4 +29,7 @@
     <string name="filter_ok">Confirm</string>
     <string name="filter_cancel">Cancel</string>
     <string name="links_cancel">Close</string>
+    <string name="title_detects_airplane_mode_change">This screen detects airplane mode changes.</string>
+    <string name="airplane_mode_enabled">Airplane mode enabled!</string>
+    <string name="airplane_mode_disabled">Airplane mode disabled!</string>
 </resources>
