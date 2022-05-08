@@ -13,10 +13,10 @@ class DashboardViewModel : ViewModel() {
             DashboardOption.CAMERA,
             DashboardOption.RADARS,
             DashboardOption.START_FOREGROUND_SERVICE,
-            DashboardOption.STOP_FOREGROUND_SERVICE,
             DashboardOption.ANIMATION,
             DashboardOption.DETECT_AIRPLANE_MODE,
-            DashboardOption.APP_CHOOSER)
+            DashboardOption.APP_CHOOSER,
+            DashboardOption.GITHUB_REPOS)
     }
 
     fun onChangeLaunchScrollPosition(index: Int) {

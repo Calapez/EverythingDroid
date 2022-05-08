@@ -25,6 +25,9 @@
         <action
             android:id="@+id/action_dashboardFragment_to_appChooserFragment"
             app:destination="@id/appChooserFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_coroutinesFragment"
+            app:destination="@id/coroutinesFragment" />
     </fragment>
 
     <fragment
@@ -53,5 +56,10 @@
         android:name="com.brunoponte.everythinglisboa.ui.appChooser.AppChooserFragment"
         android:label="AppChooserFragment"
         tools:layout="@layout/fragment_app_chooser" />
+    <fragment
+        android:id="@+id/coroutinesFragment"
+        android:name="com.brunoponte.everythinglisboa.ui.coroutines.GithubReposFragment"
+        android:label="CoroutinesFragment"
+        tools:layout="@layout/fragment_github_repos" />
 
 </navigation>

@@ -3,15 +3,13 @@ package com.brunoponte.everythinglisboa.enums
 enum class DashboardOption(val text: String) {
 
     CAMERA("Camera"),
-    RADARS("OSMDroid (Lisbon Radar Map)"),
+    RADARS("OSMDroid + Retrofit (Lisbon Radar Map)"),
     START_FOREGROUND_SERVICE("Foreground Service & Cache (Music Player)"),
-    STOP_FOREGROUND_SERVICE("Parar Serviço em Foreground"),
-    START_BACKGROUND_SERVICE("Iniciar Serviço em Background"),
-    STOP_BACKGROUND_SERVICE("Parar Serviço em Background"),
-    ANIMATION("Animações"),
+    ANIMATION("Animations"),
     COMPOSE("Compose"),
-    DETECT_AIRPLANE_MODE("Detectar Modo Avião"),
-    APP_CHOOSER("Partilhar texto com outra app"),
+    DETECT_AIRPLANE_MODE("Detect Airplane Mode"),
+    APP_CHOOSER("Share text with other app"),
+    GITHUB_REPOS("Github Repos (No Retrofit)"),
 
 
 }
