@@ -1,4 +1,4 @@
-package com.brunoponte.everythinglisboa.ui.coroutines.listAdapter
+package com.brunoponte.everythinglisboa.ui.githubRepos.listAdapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -7,10 +7,6 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.brunoponte.everythinglisboa.databinding.RepoItemBinding
 import com.brunoponte.everythinglisboa.domain.RepoItem
-import com.brunoponte.everythinglisboa.domain.RepoResult
-import com.brunoponte.everythinglisboa.enums.DashboardOption
-import com.brunoponte.everythinglisboa.ui.dashboard.list_adapter.DashboardListAdapter
-import com.brunoponte.everythinglisboa.ui.dashboard.list_adapter.DashboardViewHolder
 import com.squareup.picasso.Picasso
 
 class RepoListAdapter: ListAdapter<RepoItem, RepoListAdapter.ViewHolder>(RepoListAdapter) {

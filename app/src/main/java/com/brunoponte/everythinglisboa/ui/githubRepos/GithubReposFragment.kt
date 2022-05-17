@@ -1,4 +1,4 @@
-package com.brunoponte.everythinglisboa.ui.coroutines
+package com.brunoponte.everythinglisboa.ui.githubRepos
 
 import android.app.AlertDialog
 import android.content.Context
@@ -11,15 +11,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.brunoponte.everythinglisboa.databinding.FragmentGithubReposBinding
 import com.brunoponte.everythinglisboa.domain.RepoResult
-import com.brunoponte.everythinglisboa.ui.coroutines.listAdapter.RepoListAdapter
-import com.brunoponte.everythinglisboa.ui.dashboard.list_adapter.DashboardListAdapter
+import com.brunoponte.everythinglisboa.ui.githubRepos.listAdapter.RepoListAdapter
 import com.google.gson.Gson
-import kotlinx.android.synthetic.main.fragment_github_repos.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

@@ -67,6 +67,7 @@ class DashboardFragment : Fragment(), DashboardListInteraction {
             DashboardOption.DETECT_AIRPLANE_MODE -> findNavController().navigate(R.id.action_dashboardFragment_to_airplaneModeFragment)
             DashboardOption.APP_CHOOSER -> findNavController().navigate(R.id.action_dashboardFragment_to_appChooserFragment)
             DashboardOption.GITHUB_REPOS -> findNavController().navigate(R.id.action_dashboardFragment_to_coroutinesFragment)
+            DashboardOption.LISBOA_ABERTA -> findNavController().navigate(R.id.action_dashboardFragment_to_lisboaAbertaFragment)
             else -> { }
         }
     }

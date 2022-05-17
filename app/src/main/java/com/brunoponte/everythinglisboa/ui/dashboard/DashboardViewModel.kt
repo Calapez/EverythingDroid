@@ -16,7 +16,8 @@ class DashboardViewModel : ViewModel() {
             DashboardOption.ANIMATION,
             DashboardOption.DETECT_AIRPLANE_MODE,
             DashboardOption.APP_CHOOSER,
-            DashboardOption.GITHUB_REPOS)
+            DashboardOption.GITHUB_REPOS,
+            DashboardOption.LISBOA_ABERTA)
     }
 
     fun onChangeLaunchScrollPosition(index: Int) {

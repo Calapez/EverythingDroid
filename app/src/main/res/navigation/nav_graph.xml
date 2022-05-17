@@ -28,6 +28,9 @@
         <action
             android:id="@+id/action_dashboardFragment_to_coroutinesFragment"
             app:destination="@id/coroutinesFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_lisboaAbertaFragment"
+            app:destination="@id/lisboaAbertaFragment" />
     </fragment>
 
     <fragment
@@ -58,8 +61,13 @@
         tools:layout="@layout/fragment_app_chooser" />
     <fragment
         android:id="@+id/coroutinesFragment"
-        android:name="com.brunoponte.everythinglisboa.ui.coroutines.GithubReposFragment"
+        android:name="com.brunoponte.everythinglisboa.ui.githubRepos.GithubReposFragment"
         android:label="CoroutinesFragment"
         tools:layout="@layout/fragment_github_repos" />
+    <fragment
+        android:id="@+id/lisboaAbertaFragment"
+        android:name="com.brunoponte.everythinglisboa.ui.lisboaAberta.LisboaAbertaFragment"
+        android:label="LisboaAbertaFragment"
+        tools:layout="@layout/fragment_lisboa_aberta" />
 
 </navigation>
