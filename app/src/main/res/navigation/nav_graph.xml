@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/dashboardFragment"
-        android:name="com.brunoponte.everythinglisboa.ui.dashboard.DashboardFragment"
+        android:name="com.brunoponte.everythingdroid.ui.dashboard.DashboardFragment"
         android:label="DashboardFragment"
         tools:layout="@layout/fragment_dashboard" >
         <action
@@ -35,38 +35,38 @@
 
     <fragment
         android:id="@+id/speedRadarFragment"
-        android:name="com.brunoponte.everythinglisboa.ui.speedRadar.SpeedRadarFragment"
+        android:name="com.brunoponte.everythingdroid.ui.speedRadar.SpeedRadarFragment"
         android:label="SpeedRadarFragment"
         tools:layout="@layout/fragment_speed_radar" />
 
     <fragment
         android:id="@+id/cameraFragment"
-        android:name="com.brunoponte.everythinglisboa.ui.camera.CameraFragment"
+        android:name="com.brunoponte.everythingdroid.ui.camera.CameraFragment"
         android:label="CameraFragment"
         tools:layout="@layout/fragment_camera" />
     <fragment
         android:id="@+id/musicPlayerFragment"
-        android:name="com.brunoponte.everythinglisboa.ui.musicPlayer.MusicPlayerFragment"
+        android:name="com.brunoponte.everythingdroid.ui.musicPlayer.MusicPlayerFragment"
         android:label="MusicPlayerFragment"
         tools:layout="@layout/fragment_music_player" />
     <fragment
         android:id="@+id/airplaneModeFragment"
-        android:name="com.brunoponte.everythinglisboa.ui.airplaneMode.AirplaneModeFragment"
+        android:name="com.brunoponte.everythingdroid.ui.airplaneMode.AirplaneModeFragment"
         android:label="AirplaneModeFragment"
         tools:layout="@layout/fragment_airplane_mode" />
     <fragment
         android:id="@+id/appChooserFragment"
-        android:name="com.brunoponte.everythinglisboa.ui.appChooser.AppChooserFragment"
+        android:name="com.brunoponte.everythingdroid.ui.appChooser.AppChooserFragment"
         android:label="AppChooserFragment"
         tools:layout="@layout/fragment_app_chooser" />
     <fragment
         android:id="@+id/coroutinesFragment"
-        android:name="com.brunoponte.everythinglisboa.ui.githubRepos.GithubReposFragment"
+        android:name="com.brunoponte.everythingdroid.ui.githubRepos.GithubReposFragment"
         android:label="CoroutinesFragment"
         tools:layout="@layout/fragment_github_repos" />
     <fragment
         android:id="@+id/lisboaAbertaFragment"
-        android:name="com.brunoponte.everythinglisboa.ui.lisboaAberta.LisboaAbertaFragment"
+        android:name="com.brunoponte.everythingdroid.ui.lisboaAberta.LisboaAbertaFragment"
         android:label="LisboaAbertaFragment"
         tools:layout="@layout/fragment_lisboa_aberta" />
 

@@ -7,12 +7,12 @@ plugins {
 }
 
 android {
-    compileSdk 31
+    compileSdk 33
 
     defaultConfig {
-        applicationId "com.brunoponte.everythinglisboa"
-        minSdk 21
-        targetSdk 31
+        applicationId "com.brunoponte.everythingdroid"
+        minSdk 24
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -100,6 +100,8 @@ dependencies {
     // If you want to additionally use the CameraX Extensions library
     implementation "androidx.camera:camera-extensions:${camerax_version}"
 
+    // ARCore
+    implementation 'com.google.ar:core:1.33.0'
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'

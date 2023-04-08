@@ -24,7 +24,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Everything Lisboa"
+                android:text="Everything Droid"
                 android:padding="5dp"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline1"
                 android:textColor="@color/black"
