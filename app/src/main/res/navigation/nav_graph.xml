@@ -31,6 +31,9 @@
         <action
             android:id="@+id/action_dashboardFragment_to_lisboaAbertaFragment"
             app:destination="@id/lisboaAbertaFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_servicesPlaygroundFragment"
+            app:destination="@id/servicesPlaygroundFragment" />
     </fragment>
 
     <fragment
@@ -69,5 +72,11 @@
         android:name="com.brunoponte.everythingdroid.ui.lisboaAberta.LisboaAbertaFragment"
         android:label="LisboaAbertaFragment"
         tools:layout="@layout/fragment_lisboa_aberta" />
+    <fragment
+        android:id="@+id/servicesPlaygroundFragment"
+        android:name="com.brunoponte.everythingdroid.ui.servicesPlayground.ServicesPlaygroundFragment"
+        android:label="ServicesPlaygroundFragment"
+        tools:layout="@layout/fragment_services_playground" />
+
 
 </navigation>

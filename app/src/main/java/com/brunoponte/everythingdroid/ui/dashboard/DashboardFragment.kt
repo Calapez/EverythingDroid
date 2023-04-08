@@ -70,6 +70,7 @@ class DashboardFragment : Fragment(), DashboardListInteraction {
             DashboardOption.APP_CHOOSER -> findNavController().navigate(R.id.action_dashboardFragment_to_appChooserFragment)
             DashboardOption.GITHUB_REPOS -> findNavController().navigate(R.id.action_dashboardFragment_to_coroutinesFragment)
             DashboardOption.LISBOA_ABERTA -> findNavController().navigate(R.id.action_dashboardFragment_to_lisboaAbertaFragment)
+            DashboardOption.SERVICES -> findNavController().navigate(R.id.action_dashboardFragment_to_servicesPlaygroundFragment)
             else -> { }
         }
     }

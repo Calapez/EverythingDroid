@@ -28,6 +28,10 @@
 
         <service android:name="com.brunoponte.everythingdroid.services.MusicPlayerService" />
 
+        <service
+            android:name=".ui.servicesPlayground.CounterBackgroundService"
+            android:exported="false"/>
+
         <activity
             android:name="com.brunoponte.everythingdroid.ui.MainActivity"
             android:exported="true"
